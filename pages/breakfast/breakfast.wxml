@@ -1,0 +1,4 @@
+<!--pages/breakfast/breakfast.wxml-->
+<import  src="../template/catalog/catalog.wxml" />
+<template is='catalog' data="{{kind,data}}"></template>
+

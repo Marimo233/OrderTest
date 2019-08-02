@@ -1,0 +1,14 @@
+<view class="container">
+<view class="avatarWrap">
+<image src='../../images/avatar.png' class="avatar"></image>
+</view>
+
+<form bindsubmit="formSubmit">
+  
+  <input placeholder='请输入手机号' maxlength='11' focus='true' bindblur="handlePhone"/>
+<view wx:if="{{error}}" class="errorMessage">* 请输入正确手机号 </view>
+<input placeholder='请输入昵称' maxlength='6' bindblur="handleName" />
+
+<button form-type="submit">提交</button>
+</form>
+</view>

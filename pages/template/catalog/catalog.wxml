@@ -1,0 +1,33 @@
+<template name="catalog">
+    <view class="catalog-container" >
+      <view class="catalog-top">
+          <view class="catalog-kind-container">
+              <view class="catalog-kind" wx:for='{{kind}}' wx:key="{{item.id}}">
+                  {{item.kind}}
+              </view>
+          </view>
+          <view class="catalog-detail-container">
+            <scroll-view scroll-y>
+              <view wx:for='{{data}}' wx:key="{{item.id}}" class="catalog-detail">
+                  <image src="{{item.img}}" alt="" class="catalog-cover"/>
+                  <veiw class="catalog-detailWord">
+                    <view class="catalog-title">{{item.name}}</view>
+                    <view class="catalog-price">{{item.price}}</view>
+                  </veiw>
+                  <view class="catalog-number">
+                    <button class="catalog-decrease">-</button>
+                    1
+                    <button class="catalog-add">+</button>
+                  </view>  
+              </view>
+            </scroll-view>
+          </view>
+      </view>
+      <view class="catalog-cart">
+        <view class="icon">
+          <mp-badge content="99+"></mp-badge>
+        </view>
+        已经选购￥200
+      </view>
+    </view>
+</template>
