@@ -1,5 +1,0 @@
-@import '../template/catalog/catalog.wxss';
-image{
-  width:20px;
-  height:20px;
-}

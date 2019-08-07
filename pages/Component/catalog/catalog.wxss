@@ -1,0 +1,91 @@
+.catalog-container{
+  overflow: hidden;
+  position:absolute;
+  height:100%;
+  font-weight:normal;
+}
+.catalog-top{
+  flex: 1;
+  height:90%;
+  overflow:scroll;
+}
+.catalog-kind-container{
+  width:200rpx;
+  height:100%;
+  float: left;
+  overflow:scroll;
+}
+.catalog-kind{
+  height:100rpx;
+  line-height:100rpx;
+  font-size:32rpx;
+}
+.catalog-kind-active{
+  background:white;
+}
+.catalog-detail-container{
+  width: 550rpx;
+  float: left;
+  overflow: hidden;
+  height:100%;
+  background:white;
+}
+.catalog-detail{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:20rpx 0;
+  font-size:24rpx;
+  border-bottom:1px solid rgba(204,204,204,0.3);
+}
+.catalog-detailWord{
+  width:250rpx;
+}
+.catalog-title{
+  width:100%;
+}
+.catalog-price{
+  width:100%;
+  text-align:left;
+  color:#007aff;
+  font-weight:500;
+}
+.catalog-description{
+  line-height:30rpx;
+  color:#ccc;
+}
+.catalog-number{
+  margin-right:40rpx;
+  display:flex;
+  align-items:center;
+}
+.catalog-number-btn{
+  width:30rpx;
+  height:30rpx;
+  float:left;
+  border-radius:50%;
+  background:#007aff;
+  color:white;
+  text-align:center;
+  line-height:30rpx;
+}
+.catalog-number-choose{
+  float:left;
+  margin:0 10rpx;
+  border-bottom:1px solid #ccc;
+}
+.catalog-cover{
+  width:100rpx;
+  height:100rpx;
+  float: left;
+  margin: 0 5px;
+}
+.catalog-title{
+  float: left;
+}
+.catalog-price{
+  float: left;
+}
+.catalog-cart{
+  height:10%;
+}
