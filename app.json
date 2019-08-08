@@ -1,8 +1,8 @@
 {
   "pages": [
     
-    "pages/breakfast/breakfast",
-    "pages/dinner/dinner",
+    "pages/Order/order",
+    "pages/cart/cart",
     "pages/mine/mine",
     "pages/index/index"
   ],
@@ -16,14 +16,14 @@
   "tabBar": {
     "list": [
       {
-        "pagePath": "pages/breakfast/breakfast",
-        "text": "早餐",
+        "pagePath": "pages/Order/order",
+        "text": "点餐",
         "iconPath":"images/free_breakfast.png",
         "selectedIconPath":"images/selected-free_breakfast.png"
       },
       {
-        "pagePath": "pages/dinner/dinner",
-        "text": "晚餐",
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
         "iconPath": "images/dinner.png",
         "selectedIconPath": "images/selected-dinner.png"
       },
