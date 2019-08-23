@@ -1,4 +1,5 @@
-<view class="catalog-container" >
+
+<view class="catalog-container">
       <view class="catalog-top">
           <view class="catalog-kind-container">
               <view wx:for='{{kind}}' wx:key="{{item.id}}" class="catalog-kind {{active_id===index?'catalog-kind-active':''}}" data-index="{{index}}" bindtap="changekind">
@@ -24,9 +25,7 @@
           </view>
       </view>
       <view class="catalog-cart">
-        <view class="icon">
-          
-        </view>
-        已经选购￥200
+        已选:早餐：￥{{breakfastSum}}，晚餐：￥{{dinnerSum}}
+        合计：￥{{breakfastSum+dinnerSum}}
       </view>
     </view>

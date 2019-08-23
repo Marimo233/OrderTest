@@ -1,11 +1,13 @@
 // pages/mine/mine.js
+const app=getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    phone:'',
+    name:''
   },
 
   /**
@@ -19,14 +21,17 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    this.setData({
+      name:app.globalData.name,
+      phone:app.globalData.phone,
+    })
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    
   },
 
   /**
@@ -62,5 +67,12 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  login:function(){
+    wx.login({
+      success(res) {
+       console.log(res)
+      }
+    })
   }
 })

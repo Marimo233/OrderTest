@@ -1,32 +1,40 @@
 // pages/cart/cart.js
+const app=getApp()
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    cartNumber:{},
+    //早餐价格
+    breakfastSum:0,
+    //晚餐价格
+    dinnerSum:0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    const {cartNumber,breakfastSum,dinnerSum}=app.globalData
+    this.setData({
+      cartNumber,breakfastSum,dinnerSum
+    })
   },
 
   /**

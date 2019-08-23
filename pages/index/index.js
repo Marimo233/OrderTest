@@ -1,3 +1,4 @@
+const app=getApp()
 Page({
   data:{
     phone:'',
@@ -5,27 +6,19 @@ Page({
     error:false
   },
   formSubmit: function (e) {
-    wx.switchTab({
-      url: '/pages/breakfast/breakfast',
-      success: function(res){
-        // success
-      },
-      fail: function() {
-        // fail
-      },
-      complete: function() {
-        // complete
-      }
-    })
+    if(!this.data.error){
+      wx.switchTab({
+        url: '/pages/Order/order'
+      })
+    }
   },
   handlePhone:function(e){
     const reg=/^1[3456789]\d{9}$/
     if(reg.test(e.detail.value)){
       this.setData({
-        phone:e.target.value,
         error:false
-        
       })
+      app.globalData.phone=e.detail.value
     }else{
       this.setData({
         error:true
@@ -33,8 +26,6 @@ Page({
     }
   },
   handleName:function(e){
-    this.setData({
-      name:e.detail.value
-    })
+    app.globalData.name=e.detail.value
   }
 })

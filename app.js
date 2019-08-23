@@ -15,6 +15,14 @@ App({
       })
     }
 
-    this.globalData = {}
+    this.globalData = {
+    cartNumber:{breakfast:[],dinner:[]},
+    //早餐价格
+    breakfastSum:0,
+    //晚餐价格
+    dinnerSum:0,
+    phone:0,
+    name:''
+    }
   }
 })
