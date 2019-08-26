@@ -11,7 +11,9 @@ Page({
     //早餐价格
     breakfastSum:0,
     //晚餐价格
-    dinnerSum:0
+    dinnerSum:0,
+    dialogShow:false,
+    buttons: [{text: '取消'}, {text: '确定'}],
   },
 
   /**
@@ -70,5 +72,20 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  submitUser:function(){
+    this.setData({
+      dialogShow:true
+    })
+  },
+  tapDialogButton:function(e){
+    console.log(e)
+    if(e.detail.index===1){
+      const params=Object.assign(this.data.cartNumber,app.globalData.userInfo)
+      console.log(params)
+    }
+    this.setData({
+      dialogShow:false
+    })
   }
 })

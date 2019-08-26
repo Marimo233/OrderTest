@@ -32,8 +32,14 @@ Page({
   },
   requestData:function(kind){
     const _this=this
+    let url='http://127.0.0.1:8000'
+    if(kind===0){
+      url+='/breakfast'
+    }else{
+      url+='/dinner'
+    }
     wx.request({
-      url: 'https://www.marimo233.xyz/app/mock/227261/catalog/breakfast',
+      url,
       data: {},
       method: 'GET',
       success: function(res){
@@ -46,7 +52,6 @@ Page({
               breakfastData:data,
               data:data
             })
-          
         }else{
             _this.setData({
               dinnerData:data,

@@ -1,8 +1,8 @@
 Page({
   data:{
     kindTotal:{
-      breakfast:[{title:'1',price:'1'}],
-      dinner:[{title:'1',price:'1'}]
+      breakfast:[{title:'b',price:'1'}],
+      dinner:[{title:'a',price:'2'}]
     },
     checked:0,
     dialogShow:false,
@@ -42,6 +42,14 @@ Page({
       this.setData({
         dialogShow: false,
     })
+    wx.request({
+      url:'http://127.0.0.1:8000/submitKind',
+      method:'post',
+      data:this.data.kindTotal,
+      success (res) {
+        console.log(res)
+      }
+    })
     }
 },
 deleteKind:function(e){
@@ -61,7 +69,7 @@ deleteButton:function(){
   let catalog=this.data.kindTotal[`${deletekind.kind}`]
   const kindTotal=this.data.kindTotal
   let index=catalog.findIndex((item,index)=>{
-    return item.title===deletekind.tile
+    return item.title===deletekind.title
   })
   catalog.splice(index,1)
   this.setData({

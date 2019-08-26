@@ -9,11 +9,11 @@
           <view class="catalog-detail-container">
             <scroll-view scroll-y style="height:100%;width:100%" >
               <view wx:for='{{data}}' wx:key="{{item.id}}" class="catalog-detail">
-                  <image src="{{item.img}}" alt="" class="catalog-cover"/>
                   <veiw class="catalog-detailWord">
-                    <view class="catalog-title">{{item.name}}</view>
-                    <view class="catalog-description">{{item.detail}}</view>
-                    <view class="catalog-price"><span style='margin-right:5rpx;'>￥</span>{{item.price}}</view>
+                    {{item.title}}
+                  </veiw>
+                  <veiw class="catalog-price">
+                    ￥{{item.price}}
                   </veiw>
                   <view class="catalog-number">
                     <view class="catalog-decrease catalog-number-btn" data-id="{{item.id}}" bindtap='changeNum' wx:if="{{item.number>0}}" data-text='-'>-</view>

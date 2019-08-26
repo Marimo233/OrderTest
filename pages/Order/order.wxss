@@ -31,47 +31,47 @@
   background:white;
 }
 .catalog-detail{
-  display: flex;
-  align-items: center;
   height:180rpx;
-  font-size:24rpx;
+  font-size:32rpx;
   border-bottom:1px solid rgba(204,204,204,0.3);
   position:relative;
 }
 .catalog-detailWord{
-  width:250rpx;
-  margin-left:40rpx;
-}
-.catalog-title{
-  width:100%;
+  position:absolute;
+  top:50%;
+  left:40rpx;
+  transform:translate(0,-50%);
 }
 .catalog-price{
-  width:100%;
-  text-align:left;
   color:#007aff;
-  font-weight:500;
+  position:absolute;
+  top:50%;
+  left:55%;
+  transform:translate(-50%,-50%);
 }
 .catalog-description{
   line-height:30rpx;
   color:#ccc;
 }
 .catalog-number{
-  position:absolute;
-  top:120rpx;
-  right:30rpx;
   display:flex;
   align-items:center;
-  height:20rpx;
+  height:40rpx;
+  position:absolute;
+  top:50%;
+  right:40rpx;
+  transform:translate(0,-50%);
 }
 .catalog-number-btn{
-  width:30rpx;
-  height:30rpx;
+  width:40rpx;
+  height:40rpx;
   float:left;
   border-radius:50%;
   background:#007aff;
   color:white;
   text-align:center;
-  line-height:30rpx;
+  line-height:40rpx;
+  font-size:32rpx;
 }
 .catalog-number-choose{
   float:left;

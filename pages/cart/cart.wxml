@@ -10,9 +10,8 @@
     早餐:
   </view>
   <view wx:for='{{cartNumber.breakfast}}' wx:key="{{item.id}}" class='cart-detail'>
-    <image src="{{item.img}}" alt="" class="cart-cover"/>
     <veiw class="cart-detailWord">
-      <view class="cart-title">{{item.name}}</view>
+      <view class="cart-title">{{item.title}}</view>
       <view class="cart-price"><span style='margin-right:5rpx;'>￥</span>{{item.price}}</view>
       <view class="cart-number">{{item.number}}</view>
     </veiw>
@@ -25,9 +24,8 @@
     晚餐:
   </view>
   <view wx:for='{{cartNumber.dinner}}' wx:key="{{item.id}}" class='cart-detail'>
-    <image src="{{item.img}}" alt="" class="cart-cover"/>
     <veiw class="cart-detailWord">
-      <view class="cart-title">{{item.name}}</view>
+      <view class="cart-title">{{item.title}}</view>
       <view class="cart-price"><span style='margin-right:5rpx;'>￥</span>{{item.price}}</view>
       <view class="cart-number">{{item.number}}</view>
     </veiw>
@@ -38,4 +36,8 @@
   <view>
       总计：￥{{breakfastSum+dinnerSum}}
   </view>
+  <button bindtap="submitUser">提交</button>
+  <mp-dialog show="{{dialogShow}}" bindbuttontap="tapDialogButton" buttons="{{buttons}}">
+    <view>是否提交</view>
+</mp-dialog>
 </view>
