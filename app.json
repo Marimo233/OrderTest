@@ -1,15 +1,16 @@
 {
   "pages": [
-    "pages/index/index",
+    "pages/add/add",
     "pages/Order/order",
     "pages/cart/cart",
-    "pages/mine/mine"
+    "pages/mine/mine",
+    "pages/index/index"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "点餐测试",
+    "navigationBarTitleText": "带饭",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {

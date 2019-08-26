@@ -1,0 +1,53 @@
+form{
+  width:80%;
+  margin:0 auto;
+  margin-top:40rpx;
+}
+input{
+  margin-bottom:20rpx;
+  font-size: 24rpx;
+  border: 1px solid #ccc;
+  border-radius: 4rpx;
+  padding-left: 20rpx;
+  height:90rpx;
+}
+button{
+  width:160rpx;
+  height: 80rpx;
+  font-size: 28rpx;
+  padding: 0;
+  text-align: center;
+  line-height: 80rpx;
+  background-color: #007aff;
+  color:white;
+  border-radius: 10rpx;
+  margin:20rpx auto 20rpx;
+}
+.kind{
+  width:100%;
+  height:80rpx;
+  background:white;
+  border-bottom:2rpx solid #007aff;
+  line-height:80rpx;
+  display:flex;
+  align-items:center;
+  justify-content:space-around;
+  margin-top:20rpx;
+}
+radio{
+  font-size:32rpx;
+  margin-right:20rpx;
+}
+radio-group{
+  margin-bottom:40rpx;
+}
+.delete{
+  widTh:60rpx;
+  height:60rpx;
+  font-size:24rpx;
+  color:white;
+  background:#007aff;
+  line-height:60rpx;
+  border-radius:10rpx;
+  text-align:center;
+}

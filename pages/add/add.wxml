@@ -1,0 +1,51 @@
+<form bindsubmit="formSubmit">
+  <radio-group name="kind">
+    <radio value='0' color="#007aff" checked="{{checked===0}}">早餐</radio>
+    <radio value='1' color="#007aff" checked="{{checked===1}}">晚餐</radio>
+  </radio-group>
+  <input placeholder='请输入名称' name='title' />
+  <input placeholder='请输入价格' name='price' />
+  <button form-type="submit">增加</button>
+</form>
+<view>
+  当前已输入：
+</view>
+<view>
+早餐：
+</view>
+<view wx:for="{{kindTotal.breakfast}}" wx:key='{{index}}' class="kind">
+  <view>
+    名称：{{item.title}}
+  </view>
+  <view>
+    价格：{{item.price}}
+  </view>
+  <view class='delete' bindtap="deleteKind" data-title="{{item.title}}" data-kind='breakfast'>
+    删除
+  </view>
+</view>
+<view>
+晚餐：
+</view>
+<view wx:for="{{kindTotal.dinner}}" wx:key='{{index}}' class="kind">
+  <view>
+    名称：{{item.title}}
+  </view>
+  <view>
+    价格：{{item.price}}
+  </view>
+  <view class='delete' bindtap="deleteKind" data-title="{{item.title}}" data-kind='dinner'>
+    删除
+  </view>
+</view>
+<button bindtap="submitKind">提交</button>
+<mp-dialog show="{{dialogShow}}" bindbuttontap="tapDialogButton" buttons="{{buttons}}">
+    <view>是否提交</view>
+</mp-dialog>
+<mp-dialog show="{{kindShow}}" bindbuttontap="tapKindButton" buttons="{{button2}}">
+    <view>已存在相同食物</view>
+</mp-dialog>
+<mp-dialog show="{{deleteShow}}" bindbuttontap="deleteButton" buttons="{{buttons}}">
+    <view>是否删除</view>
+</mp-dialog>
+

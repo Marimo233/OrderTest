@@ -18,7 +18,7 @@ Page({
       this.setData({
         error:false
       })
-      app.globalData.phone=e.detail.value
+      app.globalData.userInfo.phone=e.detail.value
     }else{
       this.setData({
         error:true
@@ -26,6 +26,6 @@ Page({
     }
   },
   handleName:function(e){
-    app.globalData.name=e.detail.value
+    app.globalData.userInfo.name=e.detail.value
   }
 })

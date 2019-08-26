@@ -1,8 +1,9 @@
 <!--pages/mine/mine.wxml-->
 <view>
-  昵称：{{name}}
+  昵称：{{userInfo.name}}
   
 </view>
 <view>
-  手机号：{{phone}}
+  手机号：{{userInfo.phone}}
 </view>
+<button bindtap="skip" wx:if="{{userInfo.admin===1}}">增加菜品种类</button>

@@ -6,8 +6,12 @@ Page({
    * 页面的初始数据
    */
   data: {
-    phone:'',
-    name:''
+    userInfo:{
+      phone:'',
+      name:'',
+      admin:0
+    }
+   
   },
 
   /**
@@ -22,8 +26,12 @@ Page({
    */
   onReady: function () {
     this.setData({
-      name:app.globalData.name,
-      phone:app.globalData.phone,
+      userInfo:{
+        name:app.globalData.userInfo.name,
+        phone:app.globalData.userInfo.phone,
+        admin:app.globalData.userInfo.admin
+      }
+      
     })
   },
 
@@ -73,6 +81,12 @@ Page({
       success(res) {
        console.log(res)
       }
+    })
+  },
+  //跳转
+  skip:function(){
+    wx.navigateTo({
+      url: '/pages/add/add'
     })
   }
 })
