@@ -5,7 +5,7 @@
   </radio-group>
   <input placeholder='请输入名称' name='title' />
   <input placeholder='请输入价格' name='price' />
-  <button form-type="submit">增加</button>
+  <button form-type="submit">添加</button>
 </form>
 <view>
   当前已输入：
@@ -38,7 +38,11 @@
     删除
   </view>
 </view>
-<button bindtap="submitKind">提交</button>
+<view class='btn-container'>
+  <button bindtap="submitKind">提交</button>
+  <button bindtap="updateKind">修改</button>
+  <button bindtap="deleteKindBtn">删除</button>
+</view>
 <mp-dialog show="{{dialogShow}}" bindbuttontap="tapDialogButton" buttons="{{buttons}}">
     <view>是否提交</view>
 </mp-dialog>
@@ -47,5 +51,17 @@
 </mp-dialog>
 <mp-dialog show="{{deleteShow}}" bindbuttontap="deleteButton" buttons="{{buttons}}">
     <view>是否删除</view>
+</mp-dialog>
+<mp-dialog show="{{sameShow}}" bindbuttontap="sameButton" buttons="{{button2}}">
+    <view>已存在相同食物</view>
+    <view>早饭: <br/><span wx:for='{{sameData.breakfastTitle}}' style="margin-right:20rpx">{{item}}</span></view>
+    <view>晚饭:  <br/><span wx:for='{{sameData.dinnerTitle}}'>{{item}}</span></view>
+    
+</mp-dialog>
+<mp-dialog show="{{successShow}}" bindbuttontap="successButton" buttons="{{button2}}">
+    <view>成功</view>
+</mp-dialog>
+<mp-dialog show="{{errorShow}}" bindbuttontap="errorButton" buttons="{{button2}}">
+    <view>失败</view>
 </mp-dialog>
 

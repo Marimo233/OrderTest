@@ -1,0 +1,8 @@
+.person-container{
+  margin-bottom:30rpx;
+  border-bottom:1px solid #007aff;
+}
+.kind-container{
+  display:flex;
+  justify-content:space-around;
+}

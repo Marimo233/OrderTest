@@ -1,0 +1,22 @@
+<view wx:for="{{personData}}" wx:key="{{item.id}}" class="person-container">
+  <view>
+    姓名：{{item.name}}
+  </view>
+  <view>
+    手机号：{{item.phone}}
+  </view>
+  <view>
+    早饭:
+  </view>
+  <view wx:for-item='kind' wx:for="{{item.breakfast}}" wx:key="{{kind._id}}" class='kind-container'>
+    <span>名称：{{kind.title}} </span>
+    <span>数量：{{kind.number}} </span>
+  </view>
+  <view>
+    晚饭:
+  </view>
+  <view wx:for-item='kind' wx:for="{{item.dinner}}" wx:key="{{kind._id}}" class='kind-container'>
+    <span>名称：{{kind.title}} </span>
+    <span>数量：{{kind.number}} </span>
+  </view>
+</view>

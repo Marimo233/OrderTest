@@ -40,4 +40,10 @@
   <mp-dialog show="{{dialogShow}}" bindbuttontap="tapDialogButton" buttons="{{buttons}}">
     <view>是否提交</view>
 </mp-dialog>
+<mp-dialog show="{{successShow}}" bindbuttontap="successButton" buttons="{{buttons2}}">
+    <view>成功</view>
+</mp-dialog>
+<mp-dialog show="{{errorShow}}" bindbuttontap="errorButton" buttons="{{buttons2}}">
+    <view>失败</view>
+</mp-dialog>
 </view>

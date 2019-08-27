@@ -84,9 +84,14 @@ Page({
     })
   },
   //跳转
-  skip:function(){
+  skipKind:function(){
     wx.navigateTo({
       url: '/pages/add/add'
+    })
+  },
+  skipPerson:function(){
+    wx.navigateTo({
+      url: '/pages/person/person'
     })
   }
 })

@@ -24,7 +24,7 @@ App({
     userInfo:{
       phone:'',
       name:'',
-      admin:1
+      admin:''
     }
     
     }

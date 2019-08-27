@@ -6,4 +6,5 @@
 <view>
   手机号：{{userInfo.phone}}
 </view>
-<button bindtap="skip" wx:if="{{userInfo.admin===1}}">增加菜品种类</button>
+<button bindtap="skipKind" wx:if="{{userInfo.admin===1}}">关于菜品</button>
+<button bindtap="skipPerson" wx:if="{{userInfo.admin===1}}">查看订单</button>

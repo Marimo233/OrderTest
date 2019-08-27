@@ -13,7 +13,10 @@ Page({
     //晚餐价格
     dinnerSum:0,
     dialogShow:false,
+    successShow:false,
+    errorShow:false,
     buttons: [{text: '取消'}, {text: '确定'}],
+    buttons2: [{text: '确定'}],
   },
 
   /**
@@ -78,11 +81,47 @@ Page({
       dialogShow:true
     })
   },
+  successButton:function(){
+    this.setData({
+      successShow:false
+    })
+  },
+  errorButton:function(){
+    this.setData({
+      errorShow:false
+    })
+  },
   tapDialogButton:function(e){
-    console.log(e)
     if(e.detail.index===1){
-      const params=Object.assign(this.data.cartNumber,app.globalData.userInfo)
-      console.log(params)
+      const _this=this
+      const cart=app.globalData.cartNumber
+      cart.breakfast.map((item)=>{
+        delete item.id
+        delete item.price
+        return item
+      })
+      cart.dinner.map((item)=>{
+        delete item.id
+        delete item.price
+        return item
+      })
+      const params=Object.assign(cart,app.globalData.userInfo)
+      wx.request({
+        url:'https://www.marimo233.xyz/submitUser',
+        method:'post',
+        data:params,
+        success (res) {
+          if(res.data.code===0){
+            _this.setData({
+              successShow:true
+            })
+          }else{
+            _this.setData({
+              errorShow:true
+            })
+          }
+        }
+      })
     }
     this.setData({
       dialogShow:false

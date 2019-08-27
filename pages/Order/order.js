@@ -30,9 +30,12 @@ Page({
   onReady: function () {
   this.requestData(this.data.active_id)
   },
+  onPullDownRefresh:function(){
+    this.requestData(this.data.active_id)
+  },
   requestData:function(kind){
     const _this=this
-    let url='http://127.0.0.1:8000'
+    let url='https://www.marimo233.xyz'
     if(kind===0){
       url+='/breakfast'
     }else{
@@ -61,6 +64,9 @@ Page({
       },
       fail: function(e) {
         console.log(error)
+      },
+      complete:function(){
+        wx.stopPullDownRefresh()
       }
     })
   },
