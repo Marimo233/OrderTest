@@ -20,3 +20,4 @@
     <span>数量：{{kind.number}} </span>
   </view>
 </view>
+<button bindtap="deleteOrders" >清空</button>

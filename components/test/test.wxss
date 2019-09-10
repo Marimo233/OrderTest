@@ -1,0 +1,7 @@
+/* pages/test.wxss */
+button{
+  width: 50rpx;
+  height: 50rpx;
+  background: #ccc;
+  color: white;
+}

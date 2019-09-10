@@ -30,6 +30,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
+    this.test = this.selectComponent("#test")
   },
 
   /**
@@ -105,7 +106,8 @@ Page({
         delete item.price
         return item
       })
-      const params=Object.assign(cart,app.globalData.userInfo)
+      const userInfo=wx.getStorageSync('userInfo')
+      const params=Object.assign(cart,userInfo)
       wx.request({
         url:'https://www.marimo233.xyz/submitUser',
         method:'post',
@@ -126,5 +128,8 @@ Page({
     this.setData({
       dialogShow:false
     })
+  },
+  test111:function(){
+    this.test.click()
   }
 })

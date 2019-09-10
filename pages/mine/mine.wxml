@@ -6,5 +6,9 @@
 <view>
   手机号：{{userInfo.phone}}
 </view>
+<button bindtap="logout" >退出</button>
+<view class='Btn-container'>
 <button bindtap="skipKind" wx:if="{{userInfo.admin===1}}">关于菜品</button>
 <button bindtap="skipPerson" wx:if="{{userInfo.admin===1}}">查看订单</button>
+</view>
+

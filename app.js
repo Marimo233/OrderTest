@@ -20,12 +20,7 @@ App({
     //早餐价格
     breakfastSum:0,
     //晚餐价格
-    dinnerSum:0,
-    userInfo:{
-      phone:'',
-      name:'',
-      admin:''
-    }
+    dinnerSum:0
     
     }
   }

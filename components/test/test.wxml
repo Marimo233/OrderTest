@@ -1,0 +1,2 @@
+<!--pages/test.wxml-->
+<button bindtap="click">点击打印</button>

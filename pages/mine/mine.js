@@ -9,7 +9,7 @@ Page({
     userInfo:{
       phone:'',
       name:'',
-      admin:0
+      admin:''
     }
    
   },
@@ -25,13 +25,9 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
+    const userInfo=wx.getStorageSync('userInfo')
     this.setData({
-      userInfo:{
-        name:app.globalData.userInfo.name,
-        phone:app.globalData.userInfo.phone,
-        admin:app.globalData.userInfo.admin
-      }
-      
+      userInfo
     })
   },
 
@@ -92,6 +88,33 @@ Page({
   skipPerson:function(){
     wx.navigateTo({
       url: '/pages/person/person'
+    })
+  },
+  logout:function(){
+    wx.removeStorage({
+      key: 'userInfo',
+      success: function(res){
+        wx.showModal({
+          title: '',
+          content: '是否退出',
+          success (res) {
+            if (res.confirm) {
+              wx.redirectTo({
+                url: '/pages/index/index',
+              })
+            } else if (res.cancel) {
+              
+            }
+          }
+        })
+        
+      },
+      fail: function() {
+        // fail
+      },
+      complete: function() {
+        // complete
+      }
     })
   }
 })

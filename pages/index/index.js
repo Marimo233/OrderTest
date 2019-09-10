@@ -14,9 +14,8 @@ Page({
         method: 'GET',
         success: function(res){
           if(res.data.code===0){
-            app.globalData.userInfo.phone=_this.data.phone
-            app.globalData.userInfo.name=_this.data.name
-            app.globalData.userInfo.admin=res.data.admin
+            const {phone,name}=_this.data
+            wx.setStorageSync('userInfo', {phone,name,admin:res.data.admin})
             wx.switchTab({
               url: '/pages/Order/order'
             })
@@ -24,6 +23,13 @@ Page({
         }
       })
       
+    }
+  },
+  onLoad:function(){
+    if(wx.getStorageSync('userInfo')){
+      wx.switchTab({
+        url: '/pages/Order/order'
+      })
     }
   },
   handlePhone:function(e){

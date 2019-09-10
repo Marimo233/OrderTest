@@ -1,6 +1,8 @@
 <!--pages/cart/cart.wxml-->
 <view class='empty-cart' wx:if="{{breakfastSum+dinnerSum===0}}">
   暂无已选购商品
+  <test id="test"></test>
+  <view bindtap="test111">父组件</view>
 </view>
 <view class='cart-container' wx:if="{{breakfastSum+dinnerSum>0}}">
   <view>

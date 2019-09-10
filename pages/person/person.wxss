@@ -6,3 +6,13 @@
   display:flex;
   justify-content:space-around;
 }
+button{
+  width:200rpx;
+  height:100rpx;
+  background:#007aff;
+  color:white;
+  font-size:32rpx;
+  line-height:100rpx;
+  text-align:center;
+  margin-top:100rpx;
+}

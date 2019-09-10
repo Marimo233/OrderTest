@@ -7,5 +7,10 @@ button{
   font-size:32rpx;
   line-height:100rpx;
   text-align:center;
-  margin-top:200rpx;
+  margin-top:100rpx;
+}
+.Btn-container{
+  display:flex;
+  align-items:center;
+  justify-content:space-around;
 }
